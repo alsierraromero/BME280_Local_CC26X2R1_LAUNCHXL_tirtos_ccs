@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/BME280_pem4f.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="C:/Users/Alberto Sierra/workspace_v10/BME280_Local_CC26X2R1_LAUNCHXL_tirtos_ccs/BME280.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/BME280_pem4f.mak" src="package.bld"/>
+        <srcFile name="package/cfg/BME280_pem4f.oem4f.dep" src="package/cfg/BME280_pem4f.c"/>
+        <srcFile name="package/cfg/BME280_pem4f.dep" src="package/cfg/BME280_pem4f.cfg"/>
+        <srcFile name="package/cfg/BME280.xem4f.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.arm.elf.M4F"
+            version="ti.targets.arm.elf.M4F{1,0,20.2,5"
+            rawVersion="20.2.5"
+            platform="ti.platforms.tiva:TM4C1294NCPDT:1"
+            isa="v7M4"
+            suffix="em4f"
+            rootDir="C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS"
+            os="undefined"
+            rts="ti.targets.arm.rtsarm">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="BME280"
+        pname="BME280.pem4f"
+        target="ti.targets.arm.elf.M4F"
+        platform="ti.platforms.simplelink:CC13X2_CC26X2"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/BME280_pem4f.cfg"
+        xCfgPrefix="package/cfg/BME280_pem4f"
+        cfgScript="C:/Users/Alberto Sierra/workspace_v10/BME280_Local_CC26X2R1_LAUNCHXL_tirtos_ccs/BME280.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="BME280"
+        pname="BME280.xem4f"
+        target="ti.targets.arm.elf.M4F"
+        platform="ti.platforms.simplelink:CC13X2_CC26X2"
+        profile="release"
+        xCfgScript="package/cfg/BME280_pem4f.cfg"
+        xCfgPrefix="package/cfg/BME280_pem4f"
+        cfgScript="C:/Users/Alberto Sierra/workspace_v10/BME280_Local_CC26X2R1_LAUNCHXL_tirtos_ccs/BME280.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="BME280.xem4f"
+        args=""
+        groupName="BME280.xem4f"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>
